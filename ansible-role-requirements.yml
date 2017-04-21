@@ -10,3 +10,7 @@
   scm: git
   src: https://github.com/rajalokan/openstack-ansible-galera_client.git
   version: stable/mitaka
+- name: openstack-ansible-plugins
+  src: https://git.openstack.org/openstack/openstack-ansible-plugins
+  scm: git
+  version: stable/mitaka

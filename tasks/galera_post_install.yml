@@ -30,14 +30,12 @@
     - galera-config
 
 - name: Drop mariadb config(s)
-  config_template:
+  template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     owner: "root"
     group: "root"
     mode: "0644"
-    config_overrides: "{{ item.config_overrides }}"
-    config_type: "{{ item.config_type }}"
   with_items:
     - src: my.cnf.j2
       dest: /etc/mysql/my.cnf
